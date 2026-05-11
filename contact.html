@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – PowerTools.blog</title>
+  <meta name="description" content="Get in touch with the PowerTools.blog team. We'd love to hear your feedback, suggestions, or questions about our free financial tools." />
+  <link rel="canonical" href="https://powertools.blog/contact" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f5f2eb; --card: #ffffff; --ink: #1a1a18;
+      --ink-soft: #5a5a52; --accent: #c8440a; --accent-light: #fdf0ea; --border: #e0dbd0;
+    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.7; }
+    nav { background: var(--ink); padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'DM Serif Display', serif; color: var(--bg); font-size: 1.25rem; text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .hero { background: var(--ink); padding: 48px 40px 56px; text-align: center; }
+    .hero h1 { font-family: 'DM Serif Display', serif; font-size: 2.4rem; color: var(--bg); margin-bottom: 10px; }
+    .hero p { color: #888; font-size: 0.97rem; max-width: 400px; margin: 0 auto; }
+    .container { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 40px; }
+    .contact-option { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; text-align: center; transition: border-color 0.2s, transform 0.2s; }
+    .contact-option:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .contact-icon { font-size: 2rem; margin-bottom: 12px; }
+    .contact-option h3 { font-family: 'DM Serif Display', serif; font-size: 1.15rem; margin-bottom: 8px; }
+    .contact-option p { font-size: 0.88rem; color: var(--ink-soft); margin-bottom: 16px; }
+    .contact-option a { color: var(--accent); font-weight: 600; font-size: 0.9rem; text-decoration: none; }
+    /* FORM */
+    .form-group { margin-bottom: 20px; }
+    label { display: block; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 8px; }
+    .input-wrap { border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color 0.2s; background: #fff; }
+    .input-wrap:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(200,68,10,0.1); }
+    input, textarea, select { width: 100%; border: none; outline: none; padding: 14px 16px; font-size: 0.97rem; font-family: 'DM Sans', sans-serif; color: var(--ink); background: transparent; }
+    textarea { resize: vertical; min-height: 120px; }
+    .submit-btn { width: 100%; padding: 15px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; margin-top: 8px; }
+    .submit-btn:hover { background: #b03808; }
+    .success-msg { display: none; background: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 10px; padding: 16px 20px; color: #2e7d32; font-size: 0.93rem; margin-top: 16px; text-align: center; }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: 1.6rem; margin-bottom: 8px; }
+    .section-sub { color: var(--ink-soft); font-size: 0.93rem; margin-bottom: 28px; }
+    footer { background: var(--ink); color: #666; text-align: center; padding: 28px 24px; font-size: 0.82rem; margin-top: 48px; }
+    footer a { color: #888; text-decoration: none; }
+    @media (max-width: 600px) {
+      nav { padding: 14px 20px; }
+      .grid { grid-template-columns: 1fr; }
+      .card { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="/">Power<span>Tools</span>.blog</a>
+</nav>
+
+<div class="hero">
+  <h1>Contact Us</h1>
+  <p>Have a question, suggestion, or found a bug? We'd love to hear from you.</p>
+</div>
+
+<div class="container">
+
+  <!-- CONTACT OPTIONS -->
+  <div class="grid">
+    <div class="contact-option">
+      <div class="contact-icon">✉️</div>
+      <h3>Email Us</h3>
+      <p>For general inquiries, feedback, or partnership requests.</p>
+      <a href="mailto:hello@powertools.blog">hello@powertools.blog</a>
+    </div>
+    <div class="contact-option">
+      <div class="contact-icon">🐛</div>
+      <h3>Report a Bug</h3>
+      <p>Found an issue with one of our tools? Let us know and we'll fix it fast.</p>
+      <a href="mailto:bugs@powertools.blog">bugs@powertools.blog</a>
+    </div>
+  </div>
+
+  <!-- CONTACT FORM -->
+  <div class="card">
+    <h2 class="section-title">Send a Message</h2>
+    <p class="section-sub">Fill out the form below and we'll get back to you within 48 hours.</p>
+
+    <form id="contactForm" onsubmit="handleSubmit(event)">
+      <div class="grid" style="margin-bottom:0;">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <div class="input-wrap">
+            <input type="text" id="name" placeholder="John Smith" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <div class="input-wrap">
+            <input type="email" id="email" placeholder="john@example.com" required />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <div class="input-wrap">
+          <select id="subject">
+            <option value="">Select a topic...</option>
+            <option value="feedback">General Feedback</option>
+            <option value="bug">Bug Report</option>
+            <option value="suggestion">Tool Suggestion</option>
+            <option value="partnership">Partnership / Collaboration</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <div class="input-wrap">
+          <textarea id="message" placeholder="Tell us what's on your mind..." required></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message →</button>
+      <div class="success-msg" id="successMsg">
+        ✅ Message sent! We'll get back to you within 48 hours.
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 <a href="/">PowerTools.blog</a> · <a href="/privacy-policy">Privacy Policy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/contact">Contact</a></p>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    // In production, connect this to Formspree, EmailJS, or similar
+    document.getElementById('successMsg').style.display = 'block';
+    document.getElementById('contactForm').reset();
+    setTimeout(() => {
+      document.getElementById('successMsg').style.display = 'none';
+    }, 5000);
+  }
+</script>
+
+</body>
+</html>
