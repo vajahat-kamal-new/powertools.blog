@@ -1,0 +1,8 @@
+# robots.txt for powertools.blog
+# Updated: January 2026
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://powertools.blog/sitemap.xml
