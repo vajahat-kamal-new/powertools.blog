@@ -43,8 +43,12 @@
     gtag('config', 'G-QHZTGMTZH7');
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Non-render-blocking font loading for better performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" /></noscript>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -53,7 +57,7 @@
       --bg: #f5f2eb;
       --card: #ffffff;
       --ink: #1a1a18;
-      --ink-soft: #5a5a52;
+      --ink-soft: #4a4a42;
       --accent: #c8440a;
       --accent-light: #fdf0ea;
       --accent-2: #2d5f3f;
@@ -133,7 +137,7 @@
       color: #e8845a;
     }
     .hero p {
-      color: #b5b0a5;
+      color: #c8c4be;
       font-size: 1.05rem;
       max-width: 500px;
       margin: 0 auto;
@@ -305,7 +309,7 @@
     }
     .result-sub {
       font-size: 0.78rem;
-      color: #666;
+      color: #9a9a9a;
       margin-top: 4px;
     }
 
@@ -424,6 +428,14 @@
     }
     .faq-item.open .faq-a { display: block; }
 
+    /* ACCESSIBILITY: links distinguishable beyond color */
+    .content-section a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .content-section a:hover { text-decoration: none; }
+
     /* FOOTER */
     footer {
       background: var(--ink);
@@ -449,19 +461,19 @@
 </head>
 <body>
 
-<nav>
-  <a class="logo" href="/">Power<span>Tools</span>.blog</a>
+<nav aria-label="Main navigation">
+  <a class="logo" href="/" aria-label="PowerTools.blog Home">Power<span>Tools</span>.blog</a>
 </nav>
 
 <!-- HERO -->
-<div class="hero">
+<div class="hero" role="banner">
   <div class="hero-badge">Free Tool · No Signup Required</div>
   <h1>Salary to Hourly <em>Calculator</em></h1>
   <p>Convert your annual salary to an hourly rate instantly — plus daily, weekly, and monthly breakdowns.</p>
 </div>
 
 <!-- CALCULATOR -->
-<div class="container">
+<main class="container">
   <div class="calc-wrapper">
     <div class="calc-card">
       <div class="calc-body">
@@ -720,7 +732,7 @@
     <p style="margin-top:20px;font-size:0.88rem;color:var(--ink-soft);">All calculations above assume a standard 40-hour work week and 52 weeks per year (2,080 total hours). Use the calculator above to adjust for your actual hours and vacation time.</p>
   </div>
 
-</div><!-- /container -->
+</main><!-- /container -->
 
 <footer>
   <p>© 2026 <a href="/">PowerTools.blog</a> · Free financial tools for everyone · No ads, no data collection</p>
